@@ -21,20 +21,27 @@ export default class Main extends React.Component {
 
 render() {
     const { currentUser } = this.state
+
 return (
-      <View style={styles.container}>
+      <View style={styles.container} >
         <Text>
           Hi {currentUser && currentUser.email}!
+        </Text>
+        <Text>
+          test
         </Text>
         <Button title="Logout" onPress={this.handleLogout} />
       </View>
     )
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'flex-start',
+    marginTop: 50,
     alignItems: 'center'
   }
+
 })

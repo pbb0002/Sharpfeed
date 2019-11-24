@@ -1,10 +1,11 @@
 // SignUp.js
+//test change
 import React from 'react'
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native'
 import { firebase } from '@react-native-firebase/auth';
 
 export default class SignUp extends React.Component {
-  state = { email: '', password: '', errorMessage: null }
+  state = { email: '', password: '', username: '', errorMessage: null }
 
   handleSignUp = () => {
     firebase
@@ -22,6 +23,13 @@ render() {
           <Text style={{ color: 'red' }}>
             {this.state.errorMessage}
           </Text>}
+        <TextInput
+          placeholder="Username"
+          autoCapitalize="none"
+          style={styles.textInput}
+          onChangeText={username => this.setState({ username })}
+          value={this.state.username}
+        />
         <TextInput
           placeholder="Email"
           autoCapitalize="none"

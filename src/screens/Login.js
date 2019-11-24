@@ -20,7 +20,7 @@ export default class Login extends React.Component {
       <View style={styles.container}>
         <Text>Login</Text>
         {this.state.errorMessage &&
-          <Text style={{ color: 'red' }}>
+          <Text className="errorMessage" > //style={{ color: 'red' }}>
             {this.state.errorMessage}
           </Text>}
         <TextInput
